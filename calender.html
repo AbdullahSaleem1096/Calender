@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="view-switcher">
+        <button onclick="switchView('monthly')">Monthly View</button>
+        <button onclick="switchView('weekly')">Weekly View</button>
+    </div>
+    <div class="event-modal" id="event-modal">
+        <h2>Add Event</h2>
+        <input type="text" id="event-name" placeholder="Enter the event">
+        <button onclick="saveEventModal()">Save</button>
+        <button onclick="closeEventModal()">Close</button>
+    </div>
+    <div class="show-event" id="show-event">
+        <h2>Event Details:</h2>
+        <div id="event-details"></div>
+        <button onclick="closeShowEventModal()">Close</button>
+    </div>
+    <div class="container" id="container">
+        <div class="container-items month no-hover">
+            <button id="forward-button" onclick="changeWeekOrMonth('previous')"><</button>
+            <span id="month-name" style="font-size:30px;"><b>JANUARY</b></span>
+            <button id="backward-button" onclick="changeWeekOrMonth('next')">></button>
+        </div>
+        <div class="container-items days no-hover"><p>Monday</p></div>
+        <div class="container-items days no-hover"><p>Tuesday</p></div>
+        <div class="container-items days no-hover"><p>Wednesday</p></div>
+        <div class="container-items days no-hover"><p>Thursday</p></div>
+        <div class="container-items days no-hover"><p>Friday</p></div>
+        <div class="container-items days no-hover"><p>Saturday</p></div>
+        <div class="container-items days no-hover"><p>Sunday</p></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
